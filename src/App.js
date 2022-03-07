@@ -1,23 +1,49 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Form from './components/Form';
+import TodoLists from './components/TodoLists';
 
 function App() {
+  const [todoLists, setTodoLists] = useState([])
+  const [selectDisplay, setSelectDisplay] = useState('')
+  const [displayTodo, setDisplayTodo] = useState([])
+
+  useEffect(() => {
+    if (localStorage.key("todolists")) {
+      const dataFromDevice = localStorage.getItem("todoLists")
+      setTodoLists(JSON.parse(dataFromDevice) || [])
+    }
+  }, [])
+  useEffect(() => {
+    switch (selectDisplay) {
+      case "completed": {
+        setDisplayTodo(todoLists.filter(el => el.completed === true))
+        break;
+      }
+      case "uncompleted": {
+        setDisplayTodo(todoLists.filter(el => el.completed === false))
+        break;
+      }
+      default:
+        setDisplayTodo(todoLists)
+    }
+
+  }, [selectDisplay, todoLists])
+
+  const saveToLocalStorage = () => {
+    localStorage.setItem("todoLists", JSON.stringify(todoLists))
+  }
+
+  useEffect(() => {
+    saveToLocalStorage()
+  }, [todoLists])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Safayet's Todo List</h1>
       </header>
+      <Form todoLists={todoLists} setTodoLists={setTodoLists} setSelectDisplay={setSelectDisplay}></Form>
+      <TodoLists todoLists={todoLists} setTodoLists={setTodoLists} displayTodo={displayTodo}></TodoLists>
     </div>
   );
 }

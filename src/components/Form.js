@@ -36,7 +36,7 @@ const Form = ({ todoLists, setTodoLists, setSelectDisplay }) => {
     return (
         <form>
             <div>
-                <input type="text" value={task} className="todo-input" onChange={taskHandler} />
+                <input type="text" value={task} placeholder="Enter your to-dos" className="todo-input" onChange={taskHandler} />
                 <button className="todo-button" type="submit" onClick={todoListsHandler}>
                     <i className="fas fa-plus-square"></i>
                 </button>

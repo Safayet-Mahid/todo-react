@@ -24,9 +24,10 @@ form {
   justify-content: center;
   align-items: center;
 }
+
 form input,
 form button {
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   font-size: 2rem;
   border: none;
   background: white;
@@ -136,18 +137,37 @@ select {
   pointer-events: none;
 }
 /* Transition */
-/*
-.select:hover::after {
+
+/* .select:hover::after {
   transform: scale(1.5);
+} */
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ff6f47;
+  font-size: 1.5rem;
+  opacity: 0.6; /* Firefox */
 }
-*/
 
 @media screen and (max-width: 900px) {
   form {
     flex-direction: column;
   }
   input {
-    width: 90%;
-    margin: auto;
+    width: 80%;
+    margin: 1.5rem auto;
+  }
+  header {
+    font-size: 1.75rem;
+  }
+  select {
+    width: 15rem;
+  }
+  li {
+    min-width: 70%;
+  }
+  form input,
+  form button {
+    font-size: 1.5rem;
   }
 }

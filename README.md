@@ -4,7 +4,7 @@ This project was powered React Js.
 
 ### Live Link
 
-[Here][https://safayets-todo.netlify.app/]
+[Here](https://safayets-todo.netlify.app/)
 
 ### `ABOUT THIS PROJECT`
 

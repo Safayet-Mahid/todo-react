@@ -8,9 +8,9 @@ This project was powered React Js.
 
 ### `ABOUT THIS PROJECT`
 
-    * You can keep track of your  completed / incompleted to-dos
+    * You can keep track of your completed / incompleted to-dos
     * You can sort your completed / incompleted to-dos
-    * Your data is going to persists even after you leave the site and come back later.
+    * Your data is going to persist even after you leave the site and come back later.
 
 ### `Tech Used`
 

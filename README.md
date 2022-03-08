@@ -1,6 +1,6 @@
 # To-Do
 
-This project was powered React Js.
+This project was by React Js.
 
 ### Live Link
 

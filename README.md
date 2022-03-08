@@ -1,6 +1,6 @@
 # To-Do
 
-This project was powered ReactJs.
+This project was powered React Js.
 
 ### Live Link
 
@@ -10,7 +10,7 @@ This project was powered ReactJs.
 
     * You can keep track of your  completed / incompleted to-dos
     * You can sort your completed / incompleted to-dos
-    * Your data is going to persists even after you leave the site and    come back later.
+    * Your data is going to persists even after you leave the site and come back later.
 
 ### `Tech Used`
 

@@ -45,7 +45,7 @@ const Form = ({ todoLists, setTodoLists, setSelectDisplay }) => {
                 <select name="todos" className="filter-todo" onChange={selectedDisplayHandler} >
                     <option value="all" >All</option>
                     <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
+                    <option value="uncompleted">Incomplete</option>
                 </select>
             </div>
         </form>

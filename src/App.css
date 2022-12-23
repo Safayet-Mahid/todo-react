@@ -125,6 +125,8 @@ select {
   cursor: pointer;
   width: 12rem;
 }
+
+/* custom selects end */
 /* Arrow */
 .select::after {
   content: "\25BC";
@@ -136,15 +138,9 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
 
-/* .select:hover::after {
-  transform: scale(1.5);
-} */
 
 ::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  /* color: #ff6f47; */
   font-size: 1.5rem;
   opacity: 0.6; /* Firefox */
 }
